@@ -66,8 +66,22 @@ mkdir chroma_db
    * Deletions remove both database records and ChromaDB embeddings.
 
 ## API Endpoints
-| Endpoint |	Method |	Description|
-| /chat| 	POST |	Process user queries|
-| /upload-doc |	POST |	Upload and index documents|
-| /list-docs |	GET |	List uploaded documents|
-| /delete-doc |	POST |	Delete a document|
+|- Endpoint |	Method |	Description|
+|---|---|---|
+|- /chat| 	POST |	Process user queries|
+|- /upload-doc |	POST |	Upload and index documents|
+|- /list-docs |	GET |	List uploaded documents|
+|- /delete-doc |	POST |	Delete a document|
+
+## Project Structure
+.
+├── streamlit_app.py          # Main Streamlit frontend
+├── main.py                   # FastAPI backend
+├── sidebar.py                # Streamlit document management UI
+├── chat_interface.py         # Streamlit chat UI
+├── api_utils.py              # API client functions
+├── pydantic_models.py        # Data validation models
+├── langchain_utils.py        # RAG chain setup
+├── chroma_utils.py           # ChromaDB document indexing
+├── db_utils.py               # SQLite database operations
+└── .env                      # Environment variables
