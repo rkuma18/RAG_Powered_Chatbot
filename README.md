@@ -66,8 +66,8 @@ mkdir chroma_db
    * Deletions remove both database records and ChromaDB embeddings.
 
 ## API Endpoints
-| Endpoint |	Method |	Description
-| /chat| 	POST |	Process user queries
-| /upload-doc |	POST |	Upload and index documents
-| /list-docs |	GET |	List uploaded documents
-| /delete-doc |	POST |	Delete a document
+| Endpoint |	Method |	Description|
+| /chat| 	POST |	Process user queries|
+| /upload-doc |	POST |	Upload and index documents|
+| /list-docs |	GET |	List uploaded documents|
+| /delete-doc |	POST |	Delete a document|
