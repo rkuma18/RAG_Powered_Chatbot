@@ -38,3 +38,36 @@ Ensure the chroma_db directory exists for ChromaDB persistence:
 ```
 mkdir chroma_db
 ```
+
+## Running the Application
+
+1. Start the FastAPI backend:
+   ```
+   uvicorn main:app --reload
+   ```
+   The API will run at http://localhost:8000.
+
+2. Launch the Streamlit frontend (in a separate terminal):
+   ```
+   streamlit run streamlit_app.py
+   ```
+   Access the UI at http://localhost:8501.
+
+## Usage
+1. Upload Documents:
+  * Use the sidebar to upload supported files.
+  * Documents are automatically indexed and stored in ChromaDB.
+2. Chat Interface:
+   * Select a model (GPT-4o or GPT-4o-mini) from the sidebar.
+   * Type queries in the chat input to interact with your documents.
+   * View detailed responses under the "Details" expander.
+3. Manage Documents:
+   * Refresh the document list or delete files via the sidebar.
+   * Deletions remove both database records and ChromaDB embeddings.
+
+## API Endpoints
+| Endpoint |	Method |	Description
+| /chat| 	POST |	Process user queries
+| /upload-doc |	POST |	Upload and index documents
+| /list-docs |	GET |	List uploaded documents
+| /delete-doc |	POST |	Delete a document
